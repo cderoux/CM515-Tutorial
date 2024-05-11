@@ -1,0 +1,46 @@
+---
+title: 'R Example #1'
+output: word_document
+---
+
+# Objects and Functions
+
+R objects store information.  We can create objects using assignment operators (= or <-).  Note that R is case sensitive.
+
+R functions do things. 
+
+```{r}
+y = c(1, 2, 3, 4)
+y
+mean(y)
+Y <- 20
+Y
+```
+
+# Working with Data
+
+For this example, we will load a "built-in" data set.  
+ALWAYS look at the data!
+
+```{r}
+data(chickwts)
+str(chickwts)
+```
+
+# Summary Statistics and Graphics
+
+We will use this data to illustrate some basic analysis in R. The goal is to get started using R instead of focusing on specific R functions.
+
+For this example, we will ignore the "feed" info.  
+
+Use $ to reference a specific column within a data.frame.  R requires code to exactly match the column names in the data.frame. 
+
+```{r}
+mean(chickwts$weight)
+median(chickwts$weight)
+hist(chickwts$weight)
+boxplot(chickwts$weight)
+```
+
+
+
